@@ -1,0 +1,213 @@
+.main-catalog__header {
+  padding: 0px 20px;
+  min-height: 183px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 227px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 240px;
+  }
+}
+
+.main-catalog__text {
+  .text__size(14px; 30px);
+  text-align: center;
+  width: 245px;
+  margin-top: 3px;
+
+  @media (min-width: @tablet-width) {
+    .text__size(18px;30px);
+    width: 440px;
+    margin-top: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 580px;
+    margin-top: 23px;
+  }
+}
+
+.panorama-main {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
+  }
+
+  &::before {
+    content: "Панорама дня";
+    width: 140px;
+    height: 23px;
+    background-color: @likes-text;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    text-align: center;
+    padding: 6px 0;
+    .text__size(12px;24px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @basic-white;
+
+    @media (min-width: @tablet-width) {
+      top: 58px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 54px;
+      right: 130px;
+    }
+  }
+}
+
+.br-mobile-only {
+  @media (min-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.panorama-main__image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.panorama-main__content {
+  background-color: @basic-gray;
+  margin: 0 20px;
+  padding: 16px 11px 20px 17px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 22px 11px 17px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+
+.panorama-main__autor {
+  margin-top: 0;
+}
+
+.autor-name {
+  .text__size(14px;24px);
+  font-weight: 700;
+}
+
+.panorama__date {
+  .text__size(12px;24px);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.panorama__content {
+  .text__size(14px;24px);
+  margin-top: 2px;
+  margin-bottom: 7px;
+  max-height: 115px;
+  overflow: hidden;
+}
+
+.panorama-main__likes {
+  @media (min-width: @tablet-width) {
+    width: 130px;
+    position: absolute;
+    top: 24px;
+    right: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.panorama__like-count {
+  .text__size(12px;24px);
+  text-transform: uppercase;
+  color: @likes-text;
+  margin-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+}
+
+.panorama__like-button {
+  border: none;
+  background-color: transparent;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  &::before {
+    content: "";
+    background-image: url(../img/like.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: -4px;
+    left: 0px;
+
+    @media (min-width: @tablet-width) {
+      top: 0px;
+    }
+  }
+}
+
+.gallery {
+  .zero__indent;
+  list-style: none;
+  padding: 0 20px;
+  margin: 0 auto;
+  min-width: 280px;
+
+  @media (min-width:@tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 620px;
+    align-items: stretch;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
+}
+
+@import "card-photo.less";
+
+.gallery__item {
+
+  &:not(:last-child){
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:nth-last-child(-n+3)) {
+      margin-bottom: 54px;
+    }
+
+    &:nth-last-child(-n+3) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+

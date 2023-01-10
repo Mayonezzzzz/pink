@@ -1,0 +1,78 @@
+// Начните писать стили здесь
+
+
+
+.page {
+  min-width: 320px;
+}
+
+.page__body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", serif, Times;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  height: 100%;
+  background-color: @basic-white;
+  color: @basic-darkgrey;
+}
+
+.page__body--wrapper {
+  @media (min-width: @desktop-width) {
+    .container(1200px; none);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page__main {
+  @media (min-width: @desktop-width) {
+    width: 936px;
+    margin: 0 auto;
+  }
+}
+
+
+@tablet-width: 660px;
+@desktop-width: 1200px;
+@tablet-width-only: 1199px;
+@before-desktop-width: 950px;
+@mobile-width-only: 659px;
+
+
+@import "global/colors.less";
+@import "global/fonts.less";
+@import "global/mixins.less";
+@import "global/slider__toggle.less";
+@import "global/button.less";
+@import "global/footer.less";
+
+@import "index/page-header.less";
+@import "index/downloads.less";
+@import "index/advantages.less";
+@import "index/reviews.less";
+@import "index/price.less";
+@import "index/price-list.less";
+@import "index/effects.less";
+
+@import "blank/form.less";
+@import "blank/failure.less";
+@import "blank/success.less";
+
+@import "catalog/catalog.less";
+@import "catalog/appeal.less";
+@import "catalog/upload.less";
+
+

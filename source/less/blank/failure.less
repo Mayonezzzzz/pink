@@ -1,0 +1,107 @@
+.failure {
+  background-color: @basic-white;
+  width: 100%;
+  height: 289px;
+  box-shadow: 0px 7px 15px @popup-shadow;
+  position: fixed;
+  top: 130px;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    height: 363px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%; -50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+    height: 377px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+.failure__wrapper {
+  padding: 44px 20px 0 20px;
+  height: 134px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+
+  @media (min-width: @tablet-width) {
+    padding: 49px 65px 0 65px;
+    height: 190px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    height: 214px;
+  }
+
+}
+
+.failure__header {
+  .text__size(18px; 24px);
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .text__size(30px; 40px);
+    width: 245px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+}
+
+.failure__text {
+  .text__size(14px; 24px);
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .text__size(18px; 24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 355px;
+  }
+}
+
+.failure__button-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 111px;
+
+  @media (min-width: @tablet-width) {
+    height: 125px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic-gray;
+
+    flex-grow: 1;
+  }
+}
+
+@import "../global/button-green.less";
+
+.failure__button {
+  .button-green;
+  width: 276px;
+  height: 59px;
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+  }
+}
+
+.no-failure {
+  display: none;
+}

@@ -1,0 +1,124 @@
+.effects {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    min-height: 290px;
+    background-color: @basic-white;
+    padding-top: 94px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic-gray;
+    padding: 0;
+    min-height: 458px;
+  }
+}
+
+.effects__wrapper {
+  min-width: 310px;
+  margin: 76px 0 68px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin: 0 auto;
+    min-height: 278px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-height: 458px;
+  }
+}
+
+.effects__info {
+  width: 310px;
+  margin-left: auto;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/timer.png);
+    top: -40px;
+    left: -311px;
+    width: 238px;
+    height: 276px;
+
+    @media (min-width: @desktop-width) {
+      top: -92px;
+      left: -368px;
+      width: 296px;
+      height: 345px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+    }
+    }
+
+
+  @media (min-width: @desktop-width) {
+    width: 680px;
+    margin-top: 138px;
+  }
+}
+
+.effects__header {
+  .text__size(30px; 36px);
+  font-weight: 700;
+  width: 200px;
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-bottom: 21px;
+  }
+}
+
+.effects__text {
+  .text__size(14px; 24px);
+  margin: 0;
+  margin-bottom: 10px;
+  width: 300px;
+
+  @media (min-width: @desktop-width) {
+    .text__size(18px; 30px);
+    width: 530px;
+    margin-bottom: 31px;
+  }
+}
+
+.effects__link {
+  .text__size(14px; 24px);
+  color: @link-hover;
+
+  &:hover {
+    color: @basic-black;
+  }
+
+    @media (min-width: @desktop-width) {
+    .text__size(18px; 30px);
+  }
+}
+
+.effects__space-tablet {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.effects__space-desktop {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}

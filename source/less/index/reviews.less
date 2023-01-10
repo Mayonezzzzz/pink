@@ -1,0 +1,152 @@
+.reviews {
+  background: linear-gradient(176.5deg, @basic-white 79%, @basic-gray 79%);
+  padding: 20px;
+
+  @media (min-width: @desktop-width) {
+    min-height: 384px;
+    padding: 0;
+    background: linear-gradient(175.2deg, @basic-white 69%, @basic-gray 69%);
+  }
+}
+
+.reviews__item {
+  margin: 0;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 173px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../../img/quotes.svg);
+      display: block;
+      width: 79px;
+      height: 63px;
+      left: 306px;
+      top: -102px;
+    }
+  }
+}
+
+.reviews__wrapper {
+  min-width: 280px;
+
+  @media (min-width: @desktop-width) {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.reviews__list {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    width: 690px;
+    margin: 0 auto;
+  }
+}
+
+.reviews__autor {
+  .text__size(18px; 30px);
+  display: block;
+  color: @basic-black;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  margin-top: 21px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    .text__size(20px; 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .text__size(24px; 30px);
+    margin-top: 17px;
+    margin-bottom: 3px;
+  }
+}
+
+.reviews__info {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    text-align: center;
+    .text__size(14px; 30px);
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    .text__size(18px; 30px);
+  }
+}
+
+.reviews__text {
+  .text__size(14px; 30px);
+  text-align: center;
+  margin-top: 12px;
+
+  @media (min-width: @tablet-width) {
+    .text__size(18px; 30px);
+  }
+}
+
+.reviews__toggles {
+  text-align: center;
+  width: 57px;
+  height: 12px;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 21px;
+  margin-bottom: 113px;
+
+  @media (min-width:@tablet-width) {
+    margin-top: 36px;
+    margin-bottom: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.reviews__prev,.reviews__next {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    display: block;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover svg {
+      opacity: 0.6;
+    }
+
+    &:active svg {
+      opacity: 0.1;
+    }
+  }
+}
+
+.right-arrow {
+  transform: rotate(180deg);
+}
+
+.reviews__prev {
+  left: -129px;
+  top: 39px;
+}
+
+.reviews__next {
+  right: -129px;
+  top: 39px;
+}

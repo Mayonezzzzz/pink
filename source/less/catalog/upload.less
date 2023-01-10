@@ -1,0 +1,358 @@
+.upload__wrapper {
+  width: auto;
+  margin: 0 auto;
+
+  @media (min-width:@tablet-width) {
+    padding: 37px 20px 0 20px;
+    width: 620px;
+    min-height: 473px;
+  }
+
+  @media (min-width: @before-desktop-width) {
+    width: 800px;
+  }
+}
+
+.upload {
+  background-color: @basic-gray;
+
+  @media (min-width:@before-desktop-width) {
+    width: 925px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.upload__form {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.upload__form-image {
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 0 42px 0;
+
+  img {
+    width: 280px;
+    height: 374px;
+    padding: 0;
+    display: block;
+  }
+
+  @media (min-width:@tablet-width) {
+    width: 300px;
+    height: 400px;
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 10px;
+  }
+
+  img {
+    @media (min-width: @tablet-width) {
+      width: 300px;
+      height: 400px;
+      padding: 0;
+    }
+  }
+
+}
+
+.upload__form-border {
+  border-bottom: 1px solid @border-catalog-form;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.upload__form-options {
+  position: relative;
+  display: flex;
+  padding-bottom: 69px;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    flex-wrap: wrap;
+    width: 288px;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    min-height: 219px;
+    margin-top: 3px;
+    align-content: flex-start;
+  }
+
+  @media (min-width: @before-desktop-width) {
+    width: 390px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+    width: 440px;
+  }
+}
+
+.upload__form-option {
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    margin-left: 36px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+    }
+  }
+
+  &:last-child {
+    margin-right: 47px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+  flex-grow: 1;
+  justify-content: space-around;
+  border-bottom: 1px solid @border-catalog-form;
+  height: 70px;
+
+  &:first-child {
+    .upload__form-icon{
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &:nth-child(2) {
+    .upload__form-icon {
+      width: 24px;
+      height: 22px;
+    }
+  }
+
+  &:last-child {
+    .upload__form-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  }
+
+  @media (min-width: @before-desktop-width) {
+    &:first-child {
+      .upload__form-icon{
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    &:nth-child(2) {
+      .upload__form-icon {
+        width: 48px;
+        height: 43px;
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+      .upload__form-icon {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &:not(:first-child) {
+
+    .upload__form-range {
+      display: none;
+
+      @media (min-width: @tablet-width) {
+        display: block;
+      }
+    }
+  }
+}
+
+.upload__form-icon{
+  cursor: pointer;
+  fill: @basic-darkgrey;
+  opacity: 0.3;
+
+  &:hover{
+    fill: @basic-darkgrey;
+    opacity: 0.5;
+  }
+
+  &:active {
+    fill: @link-hover;
+    opacity: 1;
+  }
+}
+
+.upload__form-icon--active {
+  fill: @link-hover;
+  opacity: 1;
+}
+
+.upload__form-range {
+  position: absolute;
+  width: 240px;
+  top: 83px;
+  left: 20px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 202px;
+    top: 0px;
+    left: 0px;
+  }
+
+  @media (min-width: @before-desktop-width) {
+    width: 288px;
+  }
+}
+
+.upload__form-bar {
+  width: 240px;
+  height: 2px;
+  background-color: @basic-darkgrey;
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+  }
+
+  @media (min-width: @before-desktop-width) {
+    width: 288px;
+  }
+}
+
+.upload__form-toggle {
+  position: absolute;
+  background-color: @basic-white;
+  width: 11px;
+  height: 11px;
+  border: 2px solid @input-border;
+  border-radius: 50%;
+  top: -7px;
+  cursor: pointer;
+
+  &:active {
+    background-color: @link-hover;
+  }
+
+}
+
+@import "../global//button.less";
+
+.upload__form-buttons {
+  width: 280px;
+  margin: 0 auto;
+  padding: 38px 0 44px 0;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 120px;
+  align-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 260px;
+    height: 134px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 0;
+    padding-top: 62px;
+    padding-left: 37px;
+  }
+
+  @media (min-width: @before-desktop-width) {
+    width: 410px;
+    justify-content: space-between;
+    align-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 58px;
+    padding-left: 90px;
+  }
+}
+
+.upload__form-submit {
+  .button;
+  width: 280px;
+  height: 55px;
+  border: 3px solid @input-border;
+  color: @input-border;
+  .text__size(18px; 18px);
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @input-border;
+    color: @basic-white;
+  }
+
+  &:active {
+    background-color: @input-border;
+    color: @link-active-opacity;
+  }
+}
+
+.upload__form-cancel {
+  .button;
+  width: 280px;
+  height: 55px;
+  border: 3px solid @basic-darkgrey;
+  color: @basic-darkgrey;
+  .text__size(18px; 18px);
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 0.3;
+    color: @basic-darkgrey;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: @basic-darkgrey;
+    color: @link-active-opacity;
+  }
+}
+
+.upload__form-submit,.upload__form-cancel {
+  @media (min-width: @tablet-width) {
+    width: 260px;
+  }
+
+  @media (min-width: @before-desktop-width) {
+    width: 183px;
+  }
+}

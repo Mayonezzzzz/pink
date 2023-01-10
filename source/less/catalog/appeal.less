@@ -1,0 +1,32 @@
+.appeal__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  min-height: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 185px;
+    width: 950px;
+  }
+}
+
+.appeal__text {
+  .text__size(14px; 30px);
+  text-align: center;
+  margin-top: 17px;
+
+  @media (min-width: @tablet-width) {
+    .text__size(18px; 30px);
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 24px;
+  }
+}

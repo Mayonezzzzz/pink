@@ -1,0 +1,20 @@
+.button-green() {
+  padding: 0;
+  background-color: @buttons-green;
+  border: 2px solid @buttons-green;
+  border-radius: 2px;
+  cursor: pointer;
+  color: @basic-white;
+  .text__size(18px;30px);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @buttons-green-hover;
+  }
+
+  &:active {
+    background-color: @buttons-green-hover;
+    color: @link-active-opacity;
+  }
+}

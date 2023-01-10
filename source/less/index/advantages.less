@@ -1,0 +1,205 @@
+.advantages {
+  background: url(../img/advantages_phone--mobile.png) no-repeat center bottom -43px,
+              linear-gradient(174deg, @basic-white 24%, @basic-gray 24%);
+
+  @media (min-resolution: 2dppx) {
+    background: url(../img/advantages_phone--mobile@2x.png) no-repeat center bottom -43px ~"/" 157px auto,
+                linear-gradient(174deg, @basic-white 24%, @basic-gray 24%);
+  }
+
+  @media (min-resolution: 3dppx) {
+    background: url(../img/advantages_phone--mobile@3x.png) no-repeat center bottom -43px ~"/" 157px auto,
+                linear-gradient(174deg, @basic-white 24%, @basic-gray 24%);
+  }
+
+  @media (min-width: @tablet-width) {
+    background: url(../img/advantages_phone--tablet.png) no-repeat left 20px bottom -65px,
+                linear-gradient(175.5deg, @basic-white 37.5%, @basic-gray 37.5%);
+
+    @media (min-resolution: 2dppx) {
+      background: url(../img/advantages_phone--tablet@2x.png) no-repeat left 20px bottom -65px ~"/" 268px auto,
+                  linear-gradient(175.5deg, @basic-white 37.5%, @basic-gray 37.5%);
+    }
+
+    @media (min-resolution: 3dppx) {
+      background: url(../img/advantages_phone--tablet@3x.png) no-repeat left 20px bottom -65px ~"/" 268px auto,
+                  linear-gradient(175.5deg, @basic-white 37.5%, @basic-gray 37.5%);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(175.3deg, @basic-white 41.5%, @basic-gray 41.5%);
+  }
+}
+
+.advantages__wrapper {
+  .container(auto; 280px);
+  padding: 10px;
+  min-height: 700px;
+  padding-bottom: 282px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 686px;
+    padding: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1160px;
+    margin: 0 auto;
+  }
+}
+
+.advantages__header {
+  font-weight: 300;
+  .text__size(24px; 29px);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    .text__size(40px; 54px);
+    margin-top: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .text__size(50px; 68px);
+    margin-top: 42px;
+  }
+}
+
+.br-invisible {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.br-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
+.br-tablet-only {
+  display: none;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    display: inline;
+  }
+}
+
+.advantages__list {
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    min-width: 300px;
+
+    text-align: left;
+    padding-left: 310px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    text-align: center;
+    width: 955px;
+    margin: 0 auto;
+    margin-top: 57px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.advantages__list-item {
+  &:first-child .advantages__definition {
+    margin-top: 113px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 107px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 56px;
+    }
+  }
+
+
+}
+
+.advantages__list-item {
+  @media (min-width: @desktop-width) {
+
+  &:first-child::before {
+    content: "";
+    background-image: url(../img/phone_screen-1.png);
+    .size(300px; 300px);
+    display: block;
+    margin-left: 6px;
+  }
+
+  &:nth-child(2)::before {
+    content: "";
+    background-image: url(../img/phone_screen-2.png);
+    .size(300px; 300px);
+    display: block;
+    margin-left: 6px;
+  }
+
+  &:nth-child(3)::before {
+    content: "";
+    background-image: url(../img/phone_screen-3.png);
+    .size(300px; 300px);
+    display: block;
+    margin-left: 6px;
+  }
+
+  &:nth-child(2) {
+    .advantages__definition{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  &:nth-child(3) {
+    .advantages__definition{
+      margin-left: 43px;
+      margin-right: 43px;
+    }
+  }
+}
+}
+
+.advantages__definition{
+  font-weight: 700;
+  .text__size (18px; 24px);
+  margin-bottom: 12px;
+  margin-top: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 35px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .text__size(30px; 30px);
+    margin-top: 56px;
+  }
+}
+
+.advantages__import {
+  .text__size(14px; 24px);
+  margin: 0;
+  padding: 0 10px 0 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .text__size(18px; 30px);
+    margin-top: 23px;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+}
